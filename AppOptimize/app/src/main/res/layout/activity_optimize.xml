@@ -12,14 +12,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="toLeakActivity"
-        android:text="LeakActivity"
+        android:text="ToLeak"
         android:textAllCaps="false" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="toBlockActivity"
-        android:text="BlockActivity"
+        android:text="ToBlock"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toCrashActivity"
+        android:text="ToCrash"
         android:textAllCaps="false" />
 
 </LinearLayout>

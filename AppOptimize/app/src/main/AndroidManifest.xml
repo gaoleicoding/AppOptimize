@@ -17,7 +17,7 @@
         <!-- 配置APP ID -->
         <meta-data
             android:name="BUGLY_APPID"
-            android:value="5e41caa713" />
+            android:value="d344d03a7e" />
         <!-- 配置APP版本号 -->
         <meta-data
             android:name="BUGLY_APP_VERSION"
@@ -39,8 +39,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".App" />
-        <activity android:name=".LeakActivity" />
-        <activity android:name=".BlockActivity" />
+        <activity android:name=".memory.LeakActivity" />
+        <activity android:name=".block.BlockActivity" />
+        <activity android:name=".crash.CrashActivity" />
     </application>
 
 </manifest>
