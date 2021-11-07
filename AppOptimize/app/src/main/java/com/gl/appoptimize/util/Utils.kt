@@ -1,4 +1,4 @@
-package com.gl.appoptimize
+package com.gl.appoptimize.util
 
 import android.text.TextUtils
 import java.io.BufferedReader

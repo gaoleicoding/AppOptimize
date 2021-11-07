@@ -16,6 +16,8 @@ import com.tencent.matrix.util.MatrixLog
 import com.tencent.mrs.plugin.IDynamicConfig
 import java.io.File
 import java.util.concurrent.TimeUnit
+import com.gl.appoptimize.crash.CrashHandler
+
 
 class App : Application() {
     override fun onCreate() {
@@ -41,12 +43,14 @@ class App : Application() {
             .setDay(3)
             .build()
         Logan.init(config)
+        val crashHandler = CrashHandler.getInstance()
+        crashHandler.init(applicationContext)
     }
 
     fun initMatrx() {
         val builder: Matrix.Builder = Matrix.Builder(this) // build matrix
         builder.patchListener(TestPluginListener(this)) // add general pluginListener
-         val dynamicConfig = DynamicConfigImplDemo()
+        val dynamicConfig = DynamicConfigImplDemo()
 
         // init plugin
         val ioCanaryPlugin = IOCanaryPlugin(

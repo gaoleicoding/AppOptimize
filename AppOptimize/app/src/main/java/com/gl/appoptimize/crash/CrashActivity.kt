@@ -8,12 +8,16 @@ import com.tencent.bugly.crashreport.CrashReport
 
 class CrashActivity : AppCompatActivity() {
     private val TAG = "CrashActivity"
-    private lateinit var tvBlock: TextView
+    private lateinit var tvCrash: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_block)
-        tvBlock = findViewById(R.id.tv_block)
-        tvBlock.setOnClickListener({ CrashReport.testJavaCrash() })
+        setContentView(R.layout.activity_crash)
+        tvCrash = findViewById(R.id.tv_crash)
+        tvCrash.setOnClickListener({
+            tvCrash.setText("Allen")
+//            CrashReport.testJavaCrash()
+            throw  RuntimeException("抛出一个异常");
+        })
     }
 
 }

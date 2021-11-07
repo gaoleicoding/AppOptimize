@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.gl.appoptimize.block.BlockActivity
+import com.gl.appoptimize.crash.CrashActivity
 import com.gl.appoptimize.memory.LeakActivity
 
 class OptimizeActivity : AppCompatActivity() {
@@ -23,6 +24,6 @@ class OptimizeActivity : AppCompatActivity() {
     }
 
     fun toCrashActivity(view: View?) {
-        synchronized(this) { startActivity(Intent(this, BlockActivity::class.java)) }
+        synchronized(this) { startActivity(Intent(this, CrashActivity::class.java)) }
     }
 }
