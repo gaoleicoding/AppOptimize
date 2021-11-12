@@ -1,10 +1,14 @@
 package com.gl.appoptimize.crash;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Looper;
+import android.widget.Toast;
 
 import com.gl.appoptimize.util.LogUtils;
 
@@ -76,6 +80,20 @@ public class CrashHandler implements UncaughtExceptionHandler {
 //            android.os.Process.killProcess(android.os.Process.myPid());
 //            System.exit(1);
 //        }
+        Toast.makeText(mContext, "Crash!!!", Toast.LENGTH_LONG).show();
+
+//        new Handler(Looper.getMainLooper()).post(new Runnable() {
+//            @Override
+//            public void run() {
+//                try {
+//                    Looper.loop();
+//                } catch (Throwable e) {
+//                }
+//            }
+//        });
+
+
+//        mContext.startActivity(new Intent(mContext, CrashActivity.class));
     }
 
     /**
