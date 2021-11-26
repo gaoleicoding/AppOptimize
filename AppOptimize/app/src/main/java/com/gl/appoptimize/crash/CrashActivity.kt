@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.gl.appoptimize.R
-import com.tencent.bugly.crashreport.CrashReport
 
 class CrashActivity : AppCompatActivity() {
     private val TAG = "CrashActivity"
@@ -14,9 +13,9 @@ class CrashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_crash)
         tvCrash = findViewById(R.id.tv_crash)
         tvCrash.setOnClickListener({
-            tvCrash.setText("Allen")
+            tvCrash.text = "Allen"
 //            CrashReport.testJavaCrash()
-            throw  RuntimeException("抛出一个异常");
+            throw  RuntimeException("抛出一个异常")
         })
     }
 
