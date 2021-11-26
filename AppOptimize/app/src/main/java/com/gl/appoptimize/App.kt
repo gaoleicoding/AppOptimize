@@ -43,7 +43,7 @@ class App : Application() {
             .setDay(3)
             .build()
         Logan.init(config)
-        val crashHandler = CrashHandler.getInstance()
+        val crashHandler = CrashHandler.instance
         crashHandler.init(applicationContext)
     }
 
